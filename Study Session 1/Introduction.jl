@@ -2,7 +2,7 @@ using LinearAlgebra
 
 print("Hello World")
 
-println()
+println("Hello World")
 
 for i=1:1:10
     println(i)
