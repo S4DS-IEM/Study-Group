@@ -147,7 +147,7 @@ function train(func, X, ω, η, epochs)
 end
 
 # ╔═╡ d722598c-57c2-11eb-3452-531fb6522e34
-ω_trained = train(org_func, X, ω, 1e-12, 1e7)
+ω_trained = train(org_func, X, ω, 1e-10, 1e3)
 
 # ╔═╡ 8b6bc65e-57c7-11eb-372f-bd6f700363e1
 loss = sq_loss(org_func, X, ω_trained)
