@@ -25,7 +25,7 @@ end
 md"### Prediction and loss functions"
 
 # ╔═╡ 761fc420-57af-11eb-24b3-9728b06c482e
-md"We try to fit a function to a ployniomial function $f_{ML}(x)$"
+md"We try to fit a function to a ploynomial function $f_{ML}(x)$"
 
 # ╔═╡ 021f6506-57b1-11eb-2179-7b6f153fce2f
 md"$$f_{ML}(x_i) = \displaystyle\sum\limits_{j=0}^nw_jx_i^j = w_0 + x_iw_1 + x_i^2w_2+\ldots+x_i^nw_n$$"
@@ -91,9 +91,29 @@ md" ### Approximation by Linear Algebra"
 
 # ╔═╡ 8b22ff38-57f1-11eb-3143-335475eb1cb4
 md"$\begin{bmatrix}
-1 & \ldots & x\\
-a & b & c
+1 & x_1 & \ldots & x_1^n\\
+1 & x_2 & \ldots & x_2^n\\
+1 & x_3 & \ldots & x_3^n
 \end{bmatrix}$"
+
+# ╔═╡ 371b90a6-580e-11eb-3acb-a5044f21b263
+md"$\begin{bmatrix}
+w_o \\
+w_1 \\
+\vdots\\
+w_n
+\end{bmatrix}$"
+
+# ╔═╡ a5d856e6-580e-11eb-2553-758764fa82f1
+md"$\begin{bmatrix}
+y_1 \\
+y_2 \\
+\vdots\\
+y_m
+\end{bmatrix}$"
+
+# ╔═╡ 9412a32e-580e-11eb-2e53-81e72bfd38b6
+md"$$f_{ML}(x_i) = \displaystyle\sum\limits_{j=0}^nw_jx_i^j = w_0 + x_iw_1 + x_i^2w_2+\ldots+x_i^nw_n$$"
 
 # ╔═╡ 4f5c808e-57bf-11eb-2a7a-3995d6f8f866
 md"For now it is left to the reader"
@@ -108,8 +128,11 @@ function train_step(func, X, ω, η)
 	return ω
 end
 
-# ╔═╡ cf67c2ec-57c0-11eb-03f2-43bbaf8bb506
-ω = rand(4)
+# ╔═╡ 5c85511c-5811-11eb-0f2e-2352309f2261
+ω = rand(5)
+
+# ╔═╡ 0b32a3e6-5811-11eb-0d7e-95bce2da678b
+md"foo'(x) at x = 5"
 
 # ╔═╡ 11337388-57c1-11eb-3418-3979d91e6af2
 function train(func, X, ω, η, epochs)
@@ -124,10 +147,13 @@ function train(func, X, ω, η, epochs)
 end
 
 # ╔═╡ d722598c-57c2-11eb-3452-531fb6522e34
-ω_trained = train(org_func, X, ω, 1e-10, 1e6)
+ω_trained = train(org_func, X, ω, 1e-12, 1e7)
 
 # ╔═╡ 8b6bc65e-57c7-11eb-372f-bd6f700363e1
 loss = sq_loss(org_func, X, ω_trained)
+
+# ╔═╡ 4a9ee8d4-5819-11eb-3c2e-61d62fadd904
+ω_trained1 = train(org_func, X, ω_trained, 1e-12, 1e7)
 
 # ╔═╡ 328c4584-57c4-11eb-3cf5-a57e033cf574
 pred = [predict(x, ω_trained) for x in -0.5:0.01:12]
@@ -158,14 +184,19 @@ end
 # ╠═2fcaeb98-56b1-11eb-0198-a3a5088dc007
 # ╟─bd151b36-56b1-11eb-03d1-094237a3bafa
 # ╟─c7c2e3f2-57be-11eb-15c0-dbe72c95d654
-# ╠═377b50e4-57bf-11eb-1741-a73fda781579
-# ╠═8b22ff38-57f1-11eb-3143-335475eb1cb4
+# ╟─377b50e4-57bf-11eb-1741-a73fda781579
+# ╟─8b22ff38-57f1-11eb-3143-335475eb1cb4
+# ╟─371b90a6-580e-11eb-3acb-a5044f21b263
+# ╟─a5d856e6-580e-11eb-2553-758764fa82f1
+# ╟─9412a32e-580e-11eb-2e53-81e72bfd38b6
 # ╟─4f5c808e-57bf-11eb-2a7a-3995d6f8f866
 # ╟─5dd40e02-57bf-11eb-2764-0f3f2b95517b
 # ╠═84566232-57bf-11eb-390b-f33370fbd9a3
-# ╠═cf67c2ec-57c0-11eb-03f2-43bbaf8bb506
+# ╠═5c85511c-5811-11eb-0f2e-2352309f2261
+# ╟─0b32a3e6-5811-11eb-0d7e-95bce2da678b
 # ╠═11337388-57c1-11eb-3418-3979d91e6af2
 # ╠═d722598c-57c2-11eb-3452-531fb6522e34
 # ╠═8b6bc65e-57c7-11eb-372f-bd6f700363e1
+# ╠═4a9ee8d4-5819-11eb-3c2e-61d62fadd904
 # ╠═328c4584-57c4-11eb-3cf5-a57e033cf574
 # ╠═a0dfe352-57c3-11eb-348f-8380ee6b3caf
