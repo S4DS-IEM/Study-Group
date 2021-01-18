@@ -131,9 +131,6 @@ end
 # ╔═╡ 5c85511c-5811-11eb-0f2e-2352309f2261
 ω = rand(5)
 
-# ╔═╡ 0b32a3e6-5811-11eb-0d7e-95bce2da678b
-md"foo'(x) at x = 5"
-
 # ╔═╡ 11337388-57c1-11eb-3418-3979d91e6af2
 function train(func, X, ω, η, epochs)
 	for i = 1:1:epochs
@@ -147,20 +144,17 @@ function train(func, X, ω, η, epochs)
 end
 
 # ╔═╡ d722598c-57c2-11eb-3452-531fb6522e34
-ω_trained = train(org_func, X, ω, 1e-10, 1e3)
+ω_trained = train(org_func, X, ω, 8e-9, 1e6)
 
 # ╔═╡ 8b6bc65e-57c7-11eb-372f-bd6f700363e1
 loss = sq_loss(org_func, X, ω_trained)
-
-# ╔═╡ 4a9ee8d4-5819-11eb-3c2e-61d62fadd904
-ω_trained1 = train(org_func, X, ω_trained, 1e-12, 1e7)
 
 # ╔═╡ 328c4584-57c4-11eb-3cf5-a57e033cf574
 pred = [predict(x, ω_trained) for x in -0.5:0.01:12]
 
 # ╔═╡ a0dfe352-57c3-11eb-348f-8380ee6b3caf
 begin
-	plot(-0.5:0.01:12, org_func.(-0.5:0.01:12), label = "f(x)")
+	plot(-0.5:0.01:15, org_func.(-0.5:0.01:15), label = "f(x)")
 	scatter!(X, y, label = "Orginal data points")
 	ŷ = [predict(x, ω_trained) for x in X]
 	scatter!(X, ŷ, label = "Predicted data points")
@@ -193,10 +187,8 @@ end
 # ╟─5dd40e02-57bf-11eb-2764-0f3f2b95517b
 # ╠═84566232-57bf-11eb-390b-f33370fbd9a3
 # ╠═5c85511c-5811-11eb-0f2e-2352309f2261
-# ╟─0b32a3e6-5811-11eb-0d7e-95bce2da678b
 # ╠═11337388-57c1-11eb-3418-3979d91e6af2
 # ╠═d722598c-57c2-11eb-3452-531fb6522e34
 # ╠═8b6bc65e-57c7-11eb-372f-bd6f700363e1
-# ╠═4a9ee8d4-5819-11eb-3c2e-61d62fadd904
 # ╠═328c4584-57c4-11eb-3cf5-a57e033cf574
 # ╠═a0dfe352-57c3-11eb-348f-8380ee6b3caf
