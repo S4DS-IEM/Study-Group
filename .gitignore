@@ -4,5 +4,3 @@
 precompile.jl
 build
 Manifest.toml
-
-Study_Session_*/Project.toml
