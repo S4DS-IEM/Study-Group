@@ -13,6 +13,15 @@ macro bind(def, element)
     end
 end
 
+# ╔═╡ 45f1331e-59b1-11eb-2bc0-c138b1421b55
+begin
+	using Pkg
+	Pkg.activate(".")
+	Pkg.add("Zygote")
+	Pkg.add("Plots")
+	Pkg.add("PlutoUI")
+end
+
 # ╔═╡ fc1a9e20-56aa-11eb-29b1-3be8043c6ede
 begin
 	using Zygote
@@ -162,6 +171,7 @@ begin
 end
 
 # ╔═╡ Cell order:
+# ╠═45f1331e-59b1-11eb-2bc0-c138b1421b55
 # ╠═fc1a9e20-56aa-11eb-29b1-3be8043c6ede
 # ╟─e35400cc-56ad-11eb-2794-592020c6ac7e
 # ╟─761fc420-57af-11eb-24b3-9728b06c482e
