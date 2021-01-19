@@ -6,7 +6,9 @@ Objectives of the session:
   1. Polynomial Curve fitting on a synthetically generated dataset.
   2. Automatic Differentiation
   3. Getting started with Julia
-  
+
+Session notebook : [Curve Fitting using Automatic Differentiation](https://htmlpreview.github.io/?https://github.com/S4DS-IEM/Study-Group/blob/main/Study_Session_1/Curve_Fitting.html)
+
 # Polynomial Curve fitting 
 We have been following the book Pattern Recognition and Machine Learning by Chris Bishop. The first chapter of the book which introduces the mathematical concepts core to the book, begins with Curve fitting. Firstly, we created a non-linear dataset. Then, we tried to fit a polynomial to that dataset. We went through the following steps :
   1. Dataset Creation : We chose the sine function to create our dataset. For certain x values, its corresponding y value could be represented as the sum of the sine of x and a random number, which acts as noise in the dataset. The purpose of this noise is that most of the points of the dataset we have created don't lie on the curve y = sin(x) but sin(x) actually provides a very good approximation of the target function. So, basically, closer our obtained curve/function is to the sine curve, the better it is. 
