@@ -40,7 +40,7 @@ md"## Problem Formulation"
 md"### The underlying mathematics of the problem"
 
 # ╔═╡ 761fc420-57af-11eb-24b3-9728b06c482e
-md"We are trying to fit a function $f_{org}(x)$ to a ploynomial function $f_{ML}(x)$"
+md"We are trying to fit a function $f_{org}(x)$ to a polynomial function $f_{ML}(x)$"
 
 # ╔═╡ 021f6506-57b1-11eb-2179-7b6f153fce2f
 md"$$f_{ML}(x_i) = \displaystyle\sum\limits_{j=0}^nw_jx_i^j = w_0 + x_iw_1 + x_i^2w_2+\ldots+x_i^nw_n$$"
