@@ -13,21 +13,23 @@ macro bind(def, element)
     end
 end
 
-# ╔═╡ fc1a9e20-56aa-11eb-29b1-3be8043c6ede
-begin
-	using Zygote
-	using LinearAlgebra
-	using Plots
-	using PlutoUI
-	using LaTeXStrings
-	using ImageCore
-end
-
 # ╔═╡ 45f1331e-59b1-11eb-2bc0-c138b1421b55
 begin
 	using Pkg
 	Pkg.activate(".")
 	Pkg.instantiate()
+end
+
+# ╔═╡ fc1a9e20-56aa-11eb-29b1-3be8043c6ede
+begin
+	using Random
+	Random.seed!(0)
+	using Zygote
+	using LinearAlgebra
+	using Plots
+	using PlutoUI
+	using Images
+	using LaTeXStrings
 end
 
 # ╔═╡ 60a23536-59d0-11eb-368a-5588b71a6093
@@ -345,8 +347,8 @@ begin
 end
 
 # ╔═╡ Cell order:
-# ╟─fc1a9e20-56aa-11eb-29b1-3be8043c6ede
 # ╟─45f1331e-59b1-11eb-2bc0-c138b1421b55
+# ╟─fc1a9e20-56aa-11eb-29b1-3be8043c6ede
 # ╟─60a23536-59d0-11eb-368a-5588b71a6093
 # ╟─832e2c5a-59ce-11eb-32d7-85b05440f919
 # ╟─e35400cc-56ad-11eb-2794-592020c6ac7e
