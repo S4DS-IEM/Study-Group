@@ -6,7 +6,9 @@ Objectives of the session:
   2. Automatic Differentiation
   3. Getting started with Julia  
 
-**Session notebook** : [Curve Fitting using Automatic Differentiation](https://htmlpreview.github.io/?https://github.com/S4DS-IEM/Study-Group/blob/sess_1/Misc/Curve_Fitting.html)
+**Session notebooks** : 
+- **Julia** - [Curve Fitting using Automatic Differentiation](https://htmlpreview.github.io/?https://github.com/S4DS-IEM/Study-Group/blob/sess_1/Misc/Curve_Fitting.html)
+- **Python** - [Curve Fitting using Numpy from scratch](https://nbviewer.jupyter.org/github/S4DS-IEM/Study-Group/blob/main/Study_Session_1/notebooks/CurveFitting.ipynb)
 <br><br><br>
 
 ## Julia ⇌ Python
