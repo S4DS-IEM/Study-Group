@@ -10,6 +10,7 @@ Irrespective of the notebook format used we have kept a static html format the s
 
 ## Study sessions :
 - [Study Session 1](/Study_Session_1/)
+- [Study Session 2](/Study_Session_2/)
 
 ## Future Plans :
 - Github Pages
