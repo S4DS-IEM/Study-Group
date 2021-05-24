@@ -20,3 +20,4 @@ Irrespective of the notebook format used we have kept a static html format the s
 - [Deeptendu Santra](https://github.com/Dsantra92)
 - [Nirmalya Misra](https://github.com/nirmalya8)
 - [Sayantan Das Gupta](https://github.com/Arka2001)
+- [Chaitak Gorai](https://github.com/chaitak-gorai)
